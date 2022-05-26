@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff;" stylesheets="/assets/css/ui.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+   <HBox prefHeight="50.0" prefWidth="800.0">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <Pane prefHeight="200.0" prefWidth="333.0">
+         <HBox prefHeight="50.0" prefWidth="267.0">
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <Label layoutX="29.0" layoutY="15.0" text="Lépések száma:" textAlignment="CENTER">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Label>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="94.0">
+               <TextField fx:id="numberOfMovesFieldForFirstUser" alignment="CENTER" editable="false" layoutX="16.0" layoutY="13.0" prefHeight="24.0" prefWidth="50.0" />
+            </Pane>
+         </HBox>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="333.0">
+         <Label fx:id="firstUserLabel" layoutX="84.0" layoutY="13.0" text="firstUser" wrapText="true">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Label>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="333.0" />
+   </HBox>
+   <Pane maxHeight="700.0" maxWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets bottom="20.0" top="20.0" />
+      </VBox.margin>
+      <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" layoutX="100.0" layoutY="30.0" prefHeight="350.0" prefWidth="700.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button layoutX="405.0" layoutY="2.0" mnemonicParsing="false" onAction="#moveUp" prefHeight="25.0" prefWidth="90.0" text="Fel" />
+      <Button layoutX="100.0" layoutY="2.0" mnemonicParsing="false" onAction="#moveUpLeft" prefHeight="25.0" prefWidth="90.0" text="Fel balra" />
+      <Button layoutX="710.0" layoutY="2.0" mnemonicParsing="false" onAction="#moveUpRight" prefHeight="25.0" prefWidth="90.0" text="Fel jobbra" />
+      <Button layoutX="405.0" layoutY="384.0" mnemonicParsing="false" onAction="#moveDown" prefHeight="25.0" prefWidth="90.0" text="Le" />
+      <Button layoutX="100.0" layoutY="384.0" mnemonicParsing="false" onAction="#moveDownLeft" prefHeight="25.0" prefWidth="90.0" text="Le balra" />
+      <Button layoutX="710.0" layoutY="384.0" mnemonicParsing="false" onAction="#moveDownRight" prefHeight="25.0" prefWidth="90.0" text="Le jobbra" />
+      <Button layoutX="14.0" layoutY="193.0" mnemonicParsing="false" onAction="#moveLeft" prefHeight="25.0" prefWidth="80.0" text="Balra" />
+      <Button layoutX="806.0" layoutY="193.0" mnemonicParsing="false" onAction="#moveRight" prefHeight="25.0" prefWidth="80.0" text="Jobbra" />
+   </Pane>
+   <HBox prefHeight="50.0" prefWidth="800.0">
+      <VBox.margin>
+         <Insets top="50.0" />
+      </VBox.margin>
+      <Pane prefHeight="200.0" prefWidth="333.0">
+         <HBox prefHeight="50.0" prefWidth="267.0">
+            <Pane prefWidth="187.0">
+               <Label layoutX="26.0" layoutY="15.0" text="Lépések száma:" textAlignment="CENTER">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Label>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="94.0">
+               <TextField fx:id="numberOfMovesFieldForSecondUser" alignment="CENTER" editable="false" layoutX="26.0" layoutY="13.0" prefHeight="24.0" prefWidth="50.0" />
+            </Pane>
+         </HBox>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="333.0">
+         <Label fx:id="secondUserLabel" layoutX="68.0" layoutY="13.0" text="secondUser" wrapText="true">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Label>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="333.0"></Pane>
+   </HBox>
+</VBox>

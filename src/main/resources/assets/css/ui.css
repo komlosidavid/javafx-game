@@ -1,0 +1,9 @@
+.blackpane {
+    -fx-background-color: #000;
+}
+.disabled {
+    -fx-opacity: 0.5;
+}
+.active-player {
+    -fx-background-color: green;
+}
