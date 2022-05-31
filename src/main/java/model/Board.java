@@ -59,7 +59,30 @@ public class Board {
      * the second element represents if the first user is the winner. If it is, it should
      * be true.
      */
-    public boolean[] isGoalState() {
+    public boolean isGoalState() {
+        if (calculateGoalState()[0]) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Check if the first user is the winner.
+     * @return true if the first user won, false if the second user won
+     */
+    public boolean isFirstUserWon() {
+        if (calculateGoalState()[1]) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Calculate if it is goal state after a move.
+     * @return a boolean array index of 0 represents whether it is goal state
+     * Array index of 1 represents wether the first user won or not
+     */
+    private boolean[] calculateGoalState() {
         boolean goalState = false;
         List<Integer> rowsForBlueDisks = new ArrayList<>();
         List<Integer> rowsForRedDisks = new ArrayList<>();
