@@ -1,5 +1,4 @@
-# Szoftverfejlesztés beadandó házi feladat projekt
-## Játékok 2.24
+# JavaFx logikai játék az MVC modellt követve
 
 ---
 
