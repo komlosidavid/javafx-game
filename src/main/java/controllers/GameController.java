@@ -365,11 +365,11 @@ public class GameController {
      * @throws IOException if something goes wrong
      */
     private void handleGameOver(Board board) throws IOException {
-        if (board.isGoalState()[0]) {
+        if (board.isGoalState()) {
             Winner winner = new Winner();
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
             LocalDateTime now = LocalDateTime.now();
-            if (board.isGoalState()[1]) {
+            if (board.isFirstUserWon()) {
                 winner.setWinnerName(firstUserLabel.getText());
                 winner.setWinnerColor("Blue");
                 winner.setWinnerMoves(numberOfMovesForFirstUser.get());
@@ -384,7 +384,7 @@ public class GameController {
             setWinner(winner);
             var alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("Game Over");
-            alert.setContentText(board.isGoalState()[1] ?
+            alert.setContentText(board.isFirstUserWon() ?
                     firstUserLabel.getText() + " nyert." :
                     secondUserLabel.getText() + " nyert.");
             alert.showAndWait()
