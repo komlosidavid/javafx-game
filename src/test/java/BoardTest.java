@@ -39,8 +39,8 @@ public class BoardTest {
     @Test
     void isGoalStateTest() {
         boolean firstUserWon = true;
-        Assertions.assertFalse(board.isGoalState()[0]);
-        Assertions.assertNotEquals(board.isGoalState()[1], firstUserWon);
+        Assertions.assertFalse(board.isGoalState());
+        Assertions.assertNotEquals(board.isFirstUserWon(), firstUserWon);
     }
 
     @Test

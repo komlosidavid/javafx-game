@@ -115,9 +115,9 @@ public class Starter {
             if (playerOneTurn) {
                 getUserMove(this.userOne);
             }
-            if (board.isGoalState()[0]) {
+            if (board.isGoalState()) {
                 System.out.println("A játék véget ért!");
-                if (board.isGoalState()[1]) {
+                if (board.isFirstUserWon()) {
                     System.out.println(userOne.userName() + " nyert.");
                 }
                 else {
@@ -130,9 +130,9 @@ public class Starter {
             if (!playerOneTurn) {
                 getUserMove(this.userTwo);
             }
-            if (board.isGoalState()[0]) {
+            if (board.isGoalState()) {
                 System.out.println("A játék véget ért!");
-                if (board.isGoalState()[1]) {
+                if (board.isFirstUserWon()) {
                     System.out.println(userOne.userName() + " nyert.");
                 }
                 else {
